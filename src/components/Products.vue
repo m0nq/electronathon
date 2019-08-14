@@ -1,14 +1,13 @@
 <template>
   <div>
-    <h1>My Shop</h1>
     <navbar :cart="cart" :cartQty="cartQty" :cartTotal="cartTotal"></navbar>
-    <price-slider :sliderStatus="sliderStatus" :maximum.sync="maximum"></price-slider>
-    <product-list :maximum="maximum" :products="products"></product-list>
+    <h2 class="text-center mt-0">My Shop</h2>
+    <p>Share your love of technology, and spread good cheer, with Binaryville official...</p>
+    <product-list :products="products"></product-list>
   </div>
 </template>
 <script>
   import Navbar from './Navbar.vue';
-  import PriceSlider from './PriceSlider.vue';
   import ProductList from './ProductList.vue';
 
   export default {
@@ -18,13 +17,10 @@
       'maximum',
       'cart',
       'cartQty',
-      'cartTotal',
-      'sliderStatus',
-      'sliderState'
+      'cartTotal'
     ],
     components: {
       Navbar,
-      PriceSlider,
       ProductList
     }
   };

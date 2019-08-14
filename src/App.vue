@@ -1,15 +1,14 @@
 <template>
   <div id="app" class="container mt-5">
+    <img src="images/binaryville.svg" style="width: 300px;" alt="Binaryville Logo"
+         class="img-fluid m-auto d-block">
     <router-view
       :cart="cart"
       :cartQty="cartQty"
       :cartTotal="cartTotal"
-      :sliderStatus="sliderStatus"
-      :maximum.sync="maximum"
       :products="products"
       @add="addItem"
       @delete="deleteItem"
-      @toggle="toggleSliderStatus"
     ></router-view>
   </div>
 </template>
@@ -19,8 +18,6 @@
     name: 'app',
     data() {
       return {
-        maximum: 99,
-        sliderStatus: true,
         cart: [],
         products: null
       };
@@ -42,9 +39,6 @@
       }
     },
     methods: {
-      toggleSliderStatus() {
-        this.sliderStatus = !this.sliderStatus;
-      },
       deleteItem(id) {
         if (this.cart[id].qty > 1) {
           this.cart[id].qty--;
