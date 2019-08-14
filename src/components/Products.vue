@@ -3,7 +3,7 @@
     <navbar :cart="cart" :cartQty="cartQty" :cartTotal="cartTotal"></navbar>
     <h2 class="text-center mt-0">My Shop</h2>
     <p>Share your love of technology, and spread good cheer, with Binaryville official...</p>
-    <product-list :products="products"></product-list>
+    <product-list :modalPhoto="modalPhoto" :products="products"></product-list>
   </div>
 </template>
 <script>
@@ -17,7 +17,8 @@
       'maximum',
       'cart',
       'cartQty',
-      'cartTotal'
+      'cartTotal',
+      'modalPhoto'
     ],
     components: {
       Navbar,
