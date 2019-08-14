@@ -3,16 +3,18 @@
     <article id="site-modal" class="modal fade">
       <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
-          <img data-dismiss="modal" class="img-fluid" :src="modalPhoto" alt="Large Res Photo Product">
+          <img data-dismiss="modal" class="img-fluid" :src="modalPhoto"
+               alt="Large Res Photo Product">
         </div>
       </div>
     </article>
-    <transition-group name="fade" tag="div" @beforeEnter="beforeEnter" @enter="enter" @leave="leave">
+    <transition-group name="fade" tag="div" @beforeEnter="beforeEnter" @enter="enter"
+                      @leave="leave">
       <div
-        class="row d-flex mb-3 align-items-center"
-        v-for="(item, index) in products"
-        :key="item.id"
-        :data-index="index"
+          class="row d-flex mb-3 align-items-center"
+          v-for="(item, index) in products"
+          :key="item.id"
+          :data-index="index"
       >
         <div class="col-1 m-auto">
           <button class="btn btn-info" @click="$parent.$emit('add', item)">+</button>
