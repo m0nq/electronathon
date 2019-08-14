@@ -1,22 +1,22 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
-import App from "./App.vue";
-import "bootstrap";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import 'bootstrap';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
-import "bootstrap/dist/css/bootstrap.css";
-import "animate.css/animate.css";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'animate.css/animate.css';
 
 import {
   faShoppingCart,
   faDollarSign
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
+import App from './App.vue';
+
+import Products from './components/Products.vue';
+import Checkout from './components/Checkout.vue';
 
 library.add(faShoppingCart, faDollarSign);
-
-import Products from "./components/Products.vue";
-import Checkout from "./components/Checkout.vue";
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
@@ -24,11 +24,11 @@ Vue.config.productionTip = false;
 const router = new VueRouter({
   routes: [
     {
-      path: "*",
+      path: '*',
       component: Products
     },
     {
-      path: "/checkout",
+      path: '/checkout',
       component: Checkout
     }
   ]
@@ -37,4 +37,4 @@ const router = new VueRouter({
 new Vue({
   render: h => h(App),
   router
-}).$mount("#app");
+}).$mount('#app');

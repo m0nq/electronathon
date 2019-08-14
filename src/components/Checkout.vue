@@ -36,15 +36,14 @@
 </template>
 
 <script>
-import Price from "./Price.vue";
-import VueRouter from "vue-router";
+  import VueRouter from 'vue-router';
+  import Price from './Price.vue';
 
-export default {
-  name: "checkout",
-  props: ["cart", "cartTotal"],
-  components: {
-    Price
-  }
-};
+  export default {
+    name: 'checkout',
+    props: ['cart', 'cartTotal'],
+    components: {
+      Price
+    }
+  };
 </script>
-

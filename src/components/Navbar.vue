@@ -35,7 +35,8 @@
           <router-link
             class="btn btn-sm btn-outline-info text-dark float-right mr-4"
             to="/checkout"
-          >Checkout</router-link>
+          >Checkout
+          </router-link>
         </div>
       </div>
     </div>
@@ -43,18 +44,18 @@
 </template>
 
 <script>
-import Price from "./Price.vue";
-import VueRouter from "vue-router";
+  import VueRouter from 'vue-router';
 
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+  import Price from './Price.vue';
 
-export default {
-  name: "navbar",
-  props: ["cart", "cartQty", "cartTotal"],
-  components: {
-    FontAwesomeIcon,
-    VueRouter,
-    Price
-  }
-};
+  export default {
+    name: 'navbar',
+    props: ['cart', 'cartQty', 'cartTotal'],
+    components: {
+      FontAwesomeIcon,
+      VueRouter,
+      Price
+    }
+  };
 </script>

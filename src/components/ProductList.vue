@@ -25,30 +25,28 @@
 </template>
 
 <script>
-import Price from "./Price.vue";
+  import Price from './Price.vue';
 
-export default {
-  name: "product-list",
-  components: { Price },
-  props: ["products", "maximum"],
-  methods: {
-    beforeEnter: function(el) {
-      el.className = "d-none";
-    },
-    enter: function(el) {
-      var delay = el.dataset.index * 100;
-      setTimeout(function() {
-        el.className =
-          "row d-flex mb-3 align-items-center animated fadeInRight";
-      }, delay);
-    },
-    leave: function(el) {
-      var delay = el.dataset.index * 100;
-      setTimeout(function() {
-        el.className =
-          "row d-flex mb-3 align-items-center animated fadeOutRight";
-      }, delay);
+  export default {
+    name: 'product-list',
+    components: { Price },
+    props: ['products', 'maximum'],
+    methods: {
+      beforeEnter(el) {
+        el.className = 'd-none';
+      },
+      enter(el) {
+        const delay = el.dataset.index * 100;
+        setTimeout(() => {
+          el.className = 'row d-flex mb-3 align-items-center animated fadeInRight';
+        }, delay);
+      },
+      leave(el) {
+        const delay = el.dataset.index * 100;
+        setTimeout(() => {
+          el.className = 'row d-flex mb-3 align-items-center animated fadeOutRight';
+        }, delay);
+      }
     }
-  }
-};
+  };
 </script>

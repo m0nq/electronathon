@@ -25,30 +25,30 @@
 </template>
 
 <script>
-export default {
-  name: "price-slider",
-  data: function() {
-    return {
-      maxAmount: 99
-    };
-  },
-  props: ["sliderStatus"],
-  computed: {
-    sliderState: function() {
-      return this.sliderStatus ? "d-flex" : "d-none";
+  export default {
+    name: 'price-slider',
+    data() {
+      return {
+        maxAmount: 99
+      };
+    },
+    props: ['sliderStatus'],
+    computed: {
+      sliderState() {
+        return this.sliderStatus ? 'd-flex' : 'd-none';
+      }
     }
-  }
-};
+  };
 </script>
 
 <style>
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 1s ease-in-out;
-}
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 1s ease-in-out;
+  }
 </style>
