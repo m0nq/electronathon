@@ -94,6 +94,25 @@ const menuTemplate = [
       { role: 'separator' },
       { role: 'togglefullscreen' }
     ]
+  },
+  {
+    label: 'Shop',
+    submenu: [
+      {
+        label: 'Shop',
+        accelerator: process.platform === 'darwin' ? 'command+shift+i' : 'ctrl+shift+i',
+        click(item) {
+          win.webContents.send('shop');
+        }
+      },
+      {
+        label: 'Checkout',
+        accelerator: process.platform === 'darwin' ? 'command+shift+u' : 'ctrl+shift+u',
+        click(item) {
+          win.webContents.send('checkout');
+        }
+      }
+    ]
   }
 ];
 
