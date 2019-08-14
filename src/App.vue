@@ -7,6 +7,7 @@
       :cartQty="cartQty"
       :cartTotal="cartTotal"
       :products="products"
+      :modalPhoto="modalPhoto"
       @add="addItem"
       @delete="deleteItem"
       @setCurrentPhoto="setCurrentPhoto"
